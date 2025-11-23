@@ -14,10 +14,10 @@ const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'a69043ecf
 
 // 2. Create a metadata object
 const metadata = {
-  name: 'Attestify',
+  name: 'SeedVault',
   description: 'AI-powered investment vault with privacy-preserving identity verification',
-  url: 'https://attestify.vercel.app', // origin must match your domain & subdomain
-  icons: ['https://attestify.vercel.app/favicon.ico'],
+  url: 'https://seedvault.vercel.app', // origin must match your domain & subdomain
+  icons: ['https://seedvault.vercel.app/favicon.ico'],
 };
 
 // 3. Set the networks - Only Celo Sepolia testnet
