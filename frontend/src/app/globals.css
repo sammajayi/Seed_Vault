@@ -2,16 +2,16 @@
 
 @layer base {
   :root {
-    /* Theme Colors */
-    --primary: #355DFF;        /* Royal Blue */
-    --secondary: #7A4BFF;     /* Electric Purple */
-    --accent: #47D1FF;         /* Soft Cyan */
-    --background: #0A0A12;     /* Rich Black */
-    --background-alt: #191A23; /* Deep Charcoal */
-    --text-primary: #F3F3F7;   /* Off-White */
-    --text-secondary: #B5B5C4; /* Muted Silver */
-    --foreground: #F3F3F7;
-    --border: #191A23;
+    /* New app theme (light-first) */
+    --primary: #B8B4B0;        /* Warm Gray */
+    --secondary: #F1EDE8;      /* Pale Sand */
+    --background: #FFFFFF;     /* Ivory White */
+    --background-alt: #F1EDE8; /* Pale Sand as alternate background */
+    --dark-coal: #181818;      /* Dark Coal */
+    --text-primary: #0E0E0E;   /* Ink Black */
+    --text-secondary: #6F6F6F; /* Muted secondary text (derived)") */
+    --border: #E6E3E0;         /* soft border */
+    --foreground: var(--text-primary);
   }
 
   * {

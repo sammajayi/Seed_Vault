@@ -14,7 +14,7 @@ const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'a69043ecf
 
 // 2. Create a metadata object
 const metadata = {
-  name: 'SeedVault',
+  name: 'Seed Vault',
   description: 'AI-powered investment vault with privacy-preserving identity verification',
   url: 'https://seedvault.vercel.app', // origin must match your domain & subdomain
   icons: ['https://seedvault.vercel.app/favicon.ico'],
@@ -62,7 +62,12 @@ createAppKit({
   },
   themeMode: 'light',
   themeVariables: {
-    '--w3m-accent': '#16a34a', // Green color
+    '--w3m-accent': '#B8B4B0', /* primary Warm Gray */
+    '--w3m-primary': '#B8B4B0',
+    '--w3m-secondary': '#F1EDE8',
+    '--w3m-background': '#FFFFFF',
+    '--w3m-foreground': '#0E0E0E',
+    '--w3m-border-color': '#E6E3E0',
     '--w3m-border-radius-master': '12px',
   },
 });

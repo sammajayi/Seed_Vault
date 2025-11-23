@@ -32,8 +32,8 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0A0A12]/95 backdrop-blur-lg border-b border-[#191A23] shadow-lg'
-          : 'bg-[#0A0A12]/80 backdrop-blur-md border-b border-[#191A23]/50'
+          ? 'bg-dark-coal/95 backdrop-blur-lg border-b border-dark-coal shadow-lg'
+          : 'bg-dark-coal/80 backdrop-blur-md border-b border-dark-coal/50'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,15 +47,15 @@ export default function Navbar() {
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="h-10 w-10 bg-gradient-to-br from-[#355DFF] to-[#7A4BFF] rounded-xl flex items-center justify-center shadow-lg"
+                className="h-10 w-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg"
               >
-                <Sprout className="h-6 w-6 text-white" />
+                <Sprout className="h-6 w-6 text-text-primary" />
               </motion.div>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-xl font-bold text-[#F3F3F7]"
+                className="text-xl font-bold text-text-primary"
               >
                 SeedVault
               </motion.span>
@@ -72,11 +72,11 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -2 }}
-                className="text-[#B5B5C4] hover:text-[#F3F3F7] font-medium transition-colors duration-200 relative group"
+                className="text-text-secondary hover:text-text-primary font-medium transition-colors duration-200 relative group"
               >
                 {item.name}
                 <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#355DFF] to-[#7A4BFF] rounded-full"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.2 }}
@@ -100,7 +100,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-[#191A23] transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-dark-coal transition-colors"
           >
             <AnimatePresence mode="wait">
               {isMobileMenuOpen ? (
@@ -111,7 +111,7 @@ export default function Navbar() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className="h-6 w-6 text-[#B5B5C4]" />
+                  <X className="h-6 w-6 text-text-secondary" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -121,7 +121,7 @@ export default function Navbar() {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Menu className="h-6 w-6 text-[#B5B5C4]" />
+                  <Menu className="h-6 w-6 text-text-secondary" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -136,7 +136,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden border-t border-[#191A23] bg-[#0A0A12]/95 backdrop-blur-lg"
+              className="md:hidden border-t border-dark-coal bg-dark-coal/95 backdrop-blur-lg"
             >
               <div className="py-4 space-y-4">
                 {navItems.map((item, index) => (
@@ -147,7 +147,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-[#B5B5C4] hover:text-[#F3F3F7] font-medium transition-colors duration-200"
+                    className="block px-4 py-2 text-text-secondary hover:text-text-primary font-medium transition-colors duration-200"
                   >
                     {item.name}
                   </motion.a>

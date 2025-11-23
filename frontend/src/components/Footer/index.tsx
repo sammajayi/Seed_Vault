@@ -35,7 +35,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer ref={ref} className="bg-[#0A0A12] text-[#F3F3F7] py-12 relative overflow-hidden">
+    <footer ref={ref} className="bg-background text-text-primary py-12 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
@@ -48,7 +48,7 @@ export default function Footer() {
             repeat: Infinity,
             ease: 'linear',
           }}
-          className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#355DFF] to-[#7A4BFF] rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary to-secondary rounded-full blur-3xl"
         />
       </div>
 
@@ -68,20 +68,20 @@ export default function Footer() {
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="h-6 w-6 bg-gradient-to-br from-[#355DFF] to-[#7A4BFF] rounded-lg flex items-center justify-center"
+                className="h-6 w-6 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center"
               >
-                <Sprout className="h-4 w-4 text-white" />
+                <Sprout className="h-4 w-4 text-text-primary" />
               </motion.div>
-              <span className="text-xl font-bold text-[#F3F3F7]">SeedVault</span>
+              <span className="text-xl font-bold text-text-primary">SeedVault</span>
             </motion.div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-[#B5B5C4] text-sm mb-4"
-            >
-              Verified savings on Celo. Earn yield while preserving your privacy.
-            </motion.p>
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+                className="h-6 w-6 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center"
+              >
+                <Sprout className="h-4 w-4 text-text-primary" />
+              </motion.div>
+              <span className="text-xl font-bold text-text-primary">SeedVault</span>
             
             {/* Social Links */}
             <motion.div
@@ -96,10 +96,10 @@ export default function Footer() {
                   href={social.href}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-2 bg-[#191A23] hover:bg-[#355DFF] rounded-lg transition-colors duration-200 group"
+                  className="p-2 bg-dark-coal hover:bg-primary rounded-lg transition-colors duration-200 group"
                   aria-label={social.label}
                 >
-                  <social.icon className="h-4 w-4 text-[#B5B5C4] group-hover:text-[#F3F3F7] transition-colors" />
+                  <social.icon className="h-4 w-4 text-text-secondary group-hover:text-text-primary transition-colors" />
                 </motion.a>
               ))}
             </motion.div>
@@ -111,7 +111,7 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="font-semibold mb-4 text-[#F3F3F7]">Product</h4>
+            <h4 className="font-semibold mb-4 text-text-primary">Product</h4>
             <ul className="space-y-2">
               {footerLinks.product.map((link, index) => (
                 <motion.li
@@ -122,7 +122,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-sm text-[#B5B5C4] hover:text-[#F3F3F7] transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center gap-1 group"
                   >
                     {link.name}
                     <motion.div
@@ -142,7 +142,7 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="font-semibold mb-4 text-[#F3F3F7]">Resources</h4>
+            <h4 className="font-semibold mb-4 text-text-primary">Resources</h4>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <motion.li
@@ -155,7 +155,7 @@ export default function Footer() {
                     href={link.href}
                     target={link.external ? '_blank' : '_self'}
                     rel={link.external ? 'noopener noreferrer' : ''}
-                    className="text-sm text-[#B5B5C4] hover:text-[#F3F3F7] transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center gap-1 group"
                   >
                     {link.name}
                     {link.external && (
@@ -178,7 +178,7 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="font-semibold mb-4 text-[#F3F3F7]">Community</h4>
+            <h4 className="font-semibold mb-4 text-text-primary">Community</h4>
             <ul className="space-y-2">
               {footerLinks.community.map((link, index) => (
                 <motion.li
@@ -191,7 +191,7 @@ export default function Footer() {
                     href={link.href}
                     target={link.external ? '_blank' : '_self'}
                     rel={link.external ? 'noopener noreferrer' : ''}
-                    className="text-sm text-[#B5B5C4] hover:text-[#F3F3F7] transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center gap-1 group"
                   >
                     {link.name}
                     {link.external && (
@@ -214,7 +214,7 @@ export default function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="border-t border-[#191A23] pt-8"
+          className="border-t border-dark-coal pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <motion.p
@@ -230,21 +230,9 @@ export default function Footer() {
               transition={{ duration: 0.4, delay: 0.8 }}
               className="flex items-center gap-4 text-sm text-[#B5B5C4]"
             >
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.05 }}
-                className="hover:text-[#F3F3F7] transition-colors"
-              >
-                Privacy Policy
-              </motion.a>
-              <span className="text-[#B5B5C4]">•</span>
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.05 }}
-                className="hover:text-[#F3F3F7] transition-colors"
-              >
-                Terms of Service
-              </motion.a>
+              <motion.a href="#" whileHover={{ scale: 1.05 }} className="hover:text-text-primary transition-colors">Privacy Policy</motion.a>
+              <span className="text-text-secondary">•</span>
+              <motion.a href="#" whileHover={{ scale: 1.05 }} className="hover:text-text-primary transition-colors">Terms of Service</motion.a>
             </motion.div>
           </div>
         </motion.div>
