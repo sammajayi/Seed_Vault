@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Shield, Github, Twitter, MessageCircle, ExternalLink } from 'lucide-react';
+import { Sprout, Github, Twitter, MessageCircle, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -70,9 +70,9 @@ export default function Footer() {
                 transition={{ duration: 0.6 }}
                 className="h-6 w-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center"
               >
-                <Shield className="h-4 w-4 text-white" />
+                <Sprout className="h-4 w-4 text-white" />
               </motion.div>
-              <span className="text-xl font-bold">Attestify</span>
+              <span className="text-xl font-bold">SeedVault</span>
             </motion.div>
             <motion.p
               initial={{ opacity: 0 }}
@@ -221,7 +221,7 @@ export default function Footer() {
               whileHover={{ scale: 1.02 }}
               className="text-center md:text-left text-sm text-gray-400"
             >
-              © 2025 Attestify. Built for Celo Proof of Ship.
+              © 2025 SeedVault. Built for Celo Proof of Ship.
             </motion.p>
             
             <motion.div
