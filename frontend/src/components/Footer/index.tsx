@@ -221,7 +221,7 @@ export default function Footer() {
               whileHover={{ scale: 1.02 }}
               className="text-center md:text-left text-sm text-gray-400"
             >
-              © 2025 SeedVault. Built for Celo Proof of Ship.
+              © 2025 SeedVault.
             </motion.p>
             
             <motion.div
