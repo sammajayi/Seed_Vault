@@ -12,7 +12,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden pt-32 pb-20">
+    <section className="relative overflow-hidden pt-32 pb-20 bg-[#0A0A12]">
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
         <motion.div
@@ -25,7 +25,7 @@ export default function HeroSection() {
             repeat: Infinity,
             ease: 'linear',
           }}
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-br from-green-100/20 via-emerald-100/10 to-teal-100/20 rounded-full blur-3xl"
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#355DFF]/20 via-[#7A4BFF]/10 to-[#47D1FF]/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -38,7 +38,7 @@ export default function HeroSection() {
             ease: 'linear',
             delay: 5,
           }}
-          className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-blue-100/15 via-cyan-100/10 to-green-100/15 rounded-full blur-3xl"
+          className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#7A4BFF]/15 via-[#47D1FF]/10 to-[#355DFF]/15 rounded-full blur-3xl"
         />
       </div>
 
@@ -49,7 +49,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 border border-green-200 rounded-full text-green-700 font-medium mb-6 backdrop-blur-sm shadow-lg"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#191A23]/80 border border-[#355DFF]/30 rounded-full text-[#47D1FF] font-medium mb-6 backdrop-blur-sm shadow-lg"
           >
             <motion.div
               animate={{ rotate: [0, 10, -10, 0] }}
@@ -65,14 +65,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6"
+            className="text-5xl md:text-7xl font-bold text-[#F3F3F7] leading-tight mb-6"
           >
             Automated DeFi
             <motion.span
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="block bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-[#355DFF] via-[#7A4BFF] to-[#47D1FF] bg-clip-text text-transparent"
             >
               Yield Generation
             </motion.span>
@@ -91,26 +91,26 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed"
+            className="text-xl md:text-2xl text-[#B5B5C4] mb-8 leading-relaxed"
           >
             Verify once, earn forever. We <motion.span
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}
-              className="font-semibold text-gray-900 inline-block"
+              className="font-semibold text-[#F3F3F7] inline-block"
             >
               deploy your funds
             </motion.span> to 
             DeFi protocols for <motion.span
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}
-              className="font-semibold text-green-600 inline-block"
+              className="font-semibold text-[#47D1FF] inline-block"
             >
               3-15% APY
             </motion.span>. 
             AI-powered, <motion.span
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}
-              className="font-semibold text-gray-900 inline-block"
+              className="font-semibold text-[#F3F3F7] inline-block"
             >
               fully automated
             </motion.span>.
@@ -126,7 +126,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-[#355DFF] to-[#7A4BFF] text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Link href="/dashboard">
                 Launch App
@@ -143,7 +143,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               href="#how-it-works"
-              className="px-8 py-4 bg-white/80 border-2 border-gray-200 text-gray-900 rounded-2xl font-semibold hover:border-gray-300 hover:shadow-md transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
+              className="px-8 py-4 bg-[#191A23]/80 border-2 border-[#191A23] text-[#F3F3F7] rounded-2xl font-semibold hover:border-[#47D1FF] hover:shadow-md transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
             >
               See How It Works
             </motion.a>
@@ -154,7 +154,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600"
+            className="flex flex-wrap justify-center items-center gap-6 text-sm text-[#B5B5C4]"
           >
             {trustIndicators.map((indicator, index) => (
               <motion.div
@@ -163,11 +163,11 @@ export default function HeroSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 1.1 + index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2 px-4 py-2 bg-white/60 rounded-full backdrop-blur-sm hover:bg-white/80 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#191A23]/60 rounded-full backdrop-blur-sm hover:bg-[#191A23]/80 transition-colors"
               >
-                <indicator.icon className="h-5 w-5 text-green-600" />
+                <indicator.icon className="h-5 w-5 text-[#47D1FF]" />
                 <span>
-                  <strong className="text-gray-900">{indicator.highlight}</strong> {indicator.text}
+                  <strong className="text-[#F3F3F7]">{indicator.highlight}</strong> {indicator.text}
                 </span>
               </motion.div>
             ))}
@@ -186,7 +186,7 @@ export default function HeroSection() {
             }}
             className="absolute top-20 left-10 hidden lg:block"
           >
-            <div className="h-16 w-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl opacity-20 blur-sm" />
+            <div className="h-16 w-16 bg-gradient-to-br from-[#355DFF] to-[#7A4BFF] rounded-2xl opacity-20 blur-sm" />
           </motion.div>
 
           <motion.div
@@ -202,7 +202,7 @@ export default function HeroSection() {
             }}
             className="absolute top-32 right-16 hidden lg:block"
           >
-            <div className="h-12 w-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl opacity-20 blur-sm" />
+            <div className="h-12 w-12 bg-gradient-to-br from-[#7A4BFF] to-[#47D1FF] rounded-xl opacity-20 blur-sm" />
           </motion.div>
 
           <motion.div
@@ -218,7 +218,7 @@ export default function HeroSection() {
             }}
             className="absolute bottom-20 left-20 hidden lg:block"
           >
-            <div className="h-8 w-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg opacity-20 blur-sm" />
+            <div className="h-8 w-8 bg-gradient-to-br from-[#47D1FF] to-[#355DFF] rounded-lg opacity-20 blur-sm" />
           </motion.div>
         </div>
       </div>
