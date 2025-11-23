@@ -1,16 +1,16 @@
-#  Attestify
+#  Seed Vault
 
 **Automated DeFi Yield Generation on Celo • AI-Powered Investment Platform**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Attestify-blue?style=for-the-badge&logo=vercel)](https://attestify.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-seed%20vault-blue?style=for-the-badge&logo=vercel)](https://seedvault.vercel.app/)
 [![Contract](https://img.shields.io/badge/Smart%20Contract-View%20on%20CeloScan-green?style=for-the-badge&logo=ethereum)](https://sepolia.celoscan.io/address/0x9c75cC4A2D319363158dA01d97d5EFec55CED742)
 [![Built on Celo](https://img.shields.io/badge/Built%20on-Celo-gold?style=for-the-badge&logo=celo)](https://celo.org/)
 
 ---
 
-##  What is Attestify?
+##  What is Seed Vault?
 
-Attestify is a verified yield generation platform that automates DeFi investments for everyone. By combining **identity verification**, **automated fund deployment**, and **AI-powered financial assistance**, we deploy your funds to DeFi protocols (like Aave) to earn competitive yields—no technical knowledge required.
+Seed Vault is a verified yield generation platform that automates DeFi investments for everyone. By combining **identity verification**, **automated fund deployment**, and **AI-powered financial assistance**, we deploy your funds to DeFi protocols (like Aave) to earn competitive yields—no technical knowledge required.
 
 **Start earning 3-15% APY with just 10 cUSD - no technical knowledge required.**
 
@@ -86,7 +86,7 @@ Check dashboard daily. Chat with AI for advice. Withdraw anytime—no fees, no l
 
 ## 📱 Live Demo
 
-**🌐 [Try Attestify Now](https://attestify.vercel.app/)**
+**🌐 [Try Seed Vault Now](https://seedvault.vercel.app/)**
 
 - **Testnet**: Fully functional on Celo Sepolia
 - **Real Funds**: Use testnet cUSD to experience the platform
@@ -385,4 +385,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built for Celo • Making DeFi accessible to everyone**
 
-*© 2025 Attestify. All rights reserved.*
+*© 2025 Seed Vault. All rights reserved.*
