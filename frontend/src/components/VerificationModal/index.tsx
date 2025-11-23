@@ -60,22 +60,22 @@ export default function VerificationModal({ isOpen, onClose, onVerified }: Verif
       // Since our contract doesn't integrate with Self Protocol, we'll just use QR code for UX
       console.log('🔍 Building Self App with config:');
       console.log('  - version: 2');
-      console.log('  - appName: Attestify');
-      console.log('  - scope: attestify');
+      console.log('  - appName: SeedVault');
+      console.log('  - scope: seedvault');
       console.log('  - userId:', address);
       console.log('  - endpoint:', CONTRACT_ADDRESSES.celoSepolia.vault);
       console.log('  - endpointType: staging_celo');
       
       const app = new SelfAppBuilder({
         version: 2,
-        appName: process.env.NEXT_PUBLIC_SELF_APP_NAME || 'Attestify',
-        scope: process.env.NEXT_PUBLIC_SELF_SCOPE || 'attestify',
+        appName: process.env.NEXT_PUBLIC_SELF_APP_NAME || 'SeedVault',
+        scope: process.env.NEXT_PUBLIC_SELF_SCOPE || 'seedvault',
         endpoint: CONTRACT_ADDRESSES.celoSepolia.vault, // Contract address for staging_celo
         logoBase64: 'https://i.postimg.cc/mrmVf9hm/self.png',
         userId: address,
         endpointType: 'staging_celo', // Correct type for Celo Sepolia
         userIdType: 'hex', // EVM address type
-        userDefinedData: `Attestify verification for ${address}`,
+        userDefinedData: `SeedVault verification for ${address}`,
         disclosures: {
           // Required verifications for DeFi compliance
           minimumAge: 18,

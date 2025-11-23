@@ -1,8 +1,8 @@
-// Contract addresses for AttestifyVault on Celo networks
+// Contract addresses for SeedVault on Celo networks
 export const CONTRACT_ADDRESSES = {
   // Celo Sepolia Testnet (with Fixed Mock Aave for yield testing)
   celoSepolia: {
-    vault: process.env.NEXT_PUBLIC_VAULT_CONTRACT_ADDRESS || '0x9c75cC4A2D319363158dA01d97d5EFec55CED742', // Fixed AttestifyVault
+    vault: process.env.NEXT_PUBLIC_VAULT_CONTRACT_ADDRESS || '0x9c75cC4A2D319363158dA01d97d5EFec55CED742', // Fixed SeedVault
     cUSD: process.env.NEXT_PUBLIC_CUSD_CONTRACT_ADDRESS || '0xdE9e4C3ce781b4bA68120d6261cbad65ce0aB00b', // Real Celo Sepolia cUSD
     acUSD: process.env.NEXT_PUBLIC_ACUSD_CONTRACT_ADDRESS || '0xEfE339C84ECf9653fB3df3e2789a19D89466bAB3', // Fixed Mock aCUSD token
     aavePool: process.env.NEXT_PUBLIC_AAVE_POOL_ADDRESS || '0x267Cf7E391fb77329028Cba1C216ffcFb288F983', // Fixed Mock Aave Pool
@@ -20,7 +20,7 @@ export const CONTRACT_ADDRESSES = {
 
 // App configuration
 export const APP_CONFIG = {
-  name: process.env.NEXT_PUBLIC_APP_NAME || 'Attestify',
+  name: process.env.NEXT_PUBLIC_APP_NAME || 'SeedVault',
   description: process.env.NEXT_PUBLIC_APP_DESCRIPTION || 'AI-powered investment vault with privacy-preserving identity verification',
   walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'a69043ecf4dca5c34a5e70fdfeac4558',
   networks: {

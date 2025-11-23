@@ -126,7 +126,7 @@ export async function extractIntent(
     return {
       action,
       amount: extractAmountFromPrompt(prompt),
-      token: 'cUSD', // Default to cUSD for Attestify
+      token: 'cUSD', // Default to cUSD for SeedVault
       data: resultData,
     };
   } catch (error) {
@@ -176,7 +176,7 @@ export async function getRecommendation(
     }
 
     const prompt = `
-      I'm using a DeFi yield vault on Celo called Attestify. Here's my current situation:
+      I'm using a DeFi yield vault on Celo called SeedVault. Here's my current situation:
       - Vault Balance: ${context.vaultBalance} cUSD
       - Current APY: ${context.currentAPY}%
       - Strategy: ${context.strategy}
@@ -224,7 +224,7 @@ export async function explainTransaction(
       return `This will ${action} ${amount} ${token}.`;
     }
 
-    const prompt = `Explain in simple terms what happens when I ${action} ${amount} ${token} to/from the Attestify vault on Celo. Keep it brief and clear.`;
+    const prompt = `Explain in simple terms what happens when I ${action} ${amount} ${token} to/from the SeedVault vault on Celo. Keep it brief and clear.`;
 
     const response = await fetch('https://api.brianknows.org/api/v0/knowledge', {
       method: 'POST',
@@ -526,7 +526,7 @@ export function processAgentResponse(
     
     if (extractedParams?.action === 'deposit' && extractedParams.amount) {
       return {
-        response: `💰 I can help you deposit ${extractedParams.amount} cUSD into the Attestify vault.\n\n**Transaction Details:**\n• Amount: ${extractedParams.amount} cUSD\n• Protocol: Attestify Vault\n• Network: Celo Sepolia\n• APY: ${vaultContext.currentAPY}%\n• Strategy: ${vaultContext.currentStrategy}\n• Min Deposit: ${vaultContext.minDeposit || '1.00'} cUSD\n• Max Deposit: ${vaultContext.maxDeposit || '10,000.00'} cUSD\n\n**What happens:**\n1. Approve vault to spend your cUSD\n2. Deposit funds into vault\n3. Start earning yield immediately\n4. Funds deployed to Mock Aave\n\nWould you like to proceed with this deposit?`,
+        response: `💰 I can help you deposit ${extractedParams.amount} cUSD into the SeedVault vault.\n\n**Transaction Details:**\n• Amount: ${extractedParams.amount} cUSD\n• Protocol: SeedVault\n• Network: Celo Sepolia\n• APY: ${vaultContext.currentAPY}%\n• Strategy: ${vaultContext.currentStrategy}\n• Min Deposit: ${vaultContext.minDeposit || '1.00'} cUSD\n• Max Deposit: ${vaultContext.maxDeposit || '10,000.00'} cUSD\n\n**What happens:**\n1. Approve vault to spend your cUSD\n2. Deposit funds into vault\n3. Start earning yield immediately\n4. Funds deployed to Mock Aave\n\nWould you like to proceed with this deposit?`,
         actionable: {
           type: 'deposit',
           amount: extractedParams.amount,
@@ -536,7 +536,7 @@ export function processAgentResponse(
     
     if (extractedParams?.action === 'withdraw' && extractedParams.amount) {
       return {
-        response: `💸 I can help you withdraw ${extractedParams.amount} cUSD from the Attestify vault.\n\n**Transaction Details:**\n• Amount: ${extractedParams.amount} cUSD\n• Protocol: Attestify Vault\n• Network: Celo Sepolia\n• Current Balance: ${vaultContext.vaultBalance} cUSD\n\n**What happens:**\n1. Withdraw funds from vault\n2. Transfer cUSD to your wallet\n3. Includes principal + earnings\n4. Instant processing\n\nWould you like to proceed with this withdrawal?`,
+        response: `💸 I can help you withdraw ${extractedParams.amount} cUSD from the SeedVault vault.\n\n**Transaction Details:**\n• Amount: ${extractedParams.amount} cUSD\n• Protocol: SeedVault\n• Network: Celo Sepolia\n• Current Balance: ${vaultContext.vaultBalance} cUSD\n\n**What happens:**\n1. Withdraw funds from vault\n2. Transfer cUSD to your wallet\n3. Includes principal + earnings\n4. Instant processing\n\nWould you like to proceed with this withdrawal?`,
         actionable: {
           type: 'withdraw',
           amount: extractedParams.amount,
@@ -549,11 +549,11 @@ export function processAgentResponse(
   if (result.type === 'read' || result.data?.description) {
     let response = result.data?.description || 'I understand your request.';
     
-    // Add Attestify context to financial advice
+    // Add SeedVault context to financial advice
     if (response.toLowerCase().includes('yield') || 
         response.toLowerCase().includes('apy') || 
         response.toLowerCase().includes('earning')) {
-      response += `\n\n**Your Attestify Vault:**\n• Current Balance: ${vaultContext.vaultBalance} cUSD\n• APY: ${vaultContext.currentAPY}%\n• Strategy: ${vaultContext.currentStrategy}\n• Total Earnings: ${vaultContext.earnings} cUSD`;
+      response += `\n\n**Your SeedVault:**\n• Current Balance: ${vaultContext.vaultBalance} cUSD\n• APY: ${vaultContext.currentAPY}%\n• Strategy: ${vaultContext.currentStrategy}\n• Total Earnings: ${vaultContext.earnings} cUSD`;
     }
     
     return { response };
@@ -561,7 +561,7 @@ export function processAgentResponse(
   
   // Default response
   return {
-    response: result.data?.description || 'I understand your request. How can I help you with your Attestify vault?',
+    response: result.data?.description || 'I understand your request. How can I help you with your SeedVault?',
   };
 }
 

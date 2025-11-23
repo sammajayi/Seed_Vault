@@ -13,7 +13,7 @@ export default function DeploymentStatus({ className = '' }: DeploymentStatusPro
   const deploymentSteps = [
     {
       title: '1. Deploy Contract',
-      description: 'Deploy AttestifyVault to Celo Sepolia',
+      description: 'Deploy SeedVault to Celo Sepolia',
       status: contractDeployed ? 'completed' : 'pending',
       action: 'Deploy via Remix IDE or Hardhat',
     },
@@ -94,7 +94,7 @@ export default function DeploymentStatus({ className = '' }: DeploymentStatusPro
         <div className="mt-6 p-4 bg-green-50 rounded-lg">
           <h4 className="text-sm font-medium text-green-900 mb-2">Contract Deployed!</h4>
           <p className="text-sm text-green-700 mb-2">
-            AttestifyVault is live on Celo Sepolia testnet.
+            SeedVault is live on Celo Sepolia testnet.
           </p>
           <p className="text-xs text-green-600 font-mono">
             {CONTRACT_ADDRESSES.celoSepolia.vault}

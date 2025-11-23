@@ -55,8 +55,8 @@ export default function AIChat({
     const welcomeMessage: Message = {
       role: 'assistant',
       content: isBrianAIConfigured() 
-        ? `Hi! I'm your AI DeFi assistant powered by Attestify AI. 🤖\n\nI can help you:\n• Manage your vault (deposits & withdrawals)\n• Analyze your investment strategy\n• Get market insights and recommendations\n• Answer DeFi questions\n\nWhat would you like to know?`
-        : `Hi! I'm your AI DeFi assistant powered by Attestify AI. ⚠️\n\nBrian AI is not configured yet. To enable AI features:\n1. Get an API key from https://brianknows.org\n2. Add NEXT_PUBLIC_BRIAN_API_KEY to your .env.local\n\nFor now, I can provide basic information about your vault.`,
+        ? `Hi! I'm your AI DeFi assistant powered by SeedVault AI. 🤖\n\nI can help you:\n• Manage your vault (deposits & withdrawals)\n• Analyze your investment strategy\n• Get market insights and recommendations\n• Answer DeFi questions\n\nWhat would you like to know?`
+        : `Hi! I'm your AI DeFi assistant powered by SeedVault AI. ⚠️\n\nBrian AI is not configured yet. To enable AI features:\n1. Get an API key from https://brianknows.org\n2. Add NEXT_PUBLIC_BRIAN_API_KEY to your .env.local\n\nFor now, I can provide basic information about your vault.`,
       timestamp: new Date(),
     };
     setMessages([welcomeMessage]);
@@ -182,7 +182,7 @@ export default function AIChat({
         inputLower.includes('what\'s my') ||
         inputLower.includes('my balance')) {
       const earningsNum = parseFloat(earnings);
-      return `📊 Your Attestify Portfolio:\n\n• Vault Balance: ${vaultBalance} cUSD\n• Total Earnings: ${earningsNum > 0.01 ? earningsNum.toFixed(2) : earningsNum.toFixed(6)} cUSD\n• Current APY: ${currentAPY}%\n• Strategy: ${currentStrategy}\n\nYou're earning approximately $${(parseFloat(vaultBalance) * parseFloat(currentAPY) / 100 / 365).toFixed(6)} per day!`;
+      return `📊 Your SeedVault Portfolio:\n\n• Vault Balance: ${vaultBalance} cUSD\n• Total Earnings: ${earningsNum > 0.01 ? earningsNum.toFixed(2) : earningsNum.toFixed(6)} cUSD\n• Current APY: ${currentAPY}%\n• Strategy: ${currentStrategy}\n\nYou're earning approximately $${(parseFloat(vaultBalance) * parseFloat(currentAPY) / 100 / 365).toFixed(6)} per day!`;
     }
     // Performance queries - expanded patterns
     else if (inputLower.includes('performance') || 
@@ -226,11 +226,11 @@ export default function AIChat({
           const knowledgeResponse = await getDeFiKnowledge(currentInput, 'celo');
           let response = knowledgeResponse.answer;
           
-          // Add Attestify context if relevant
+          // Add SeedVault context if relevant
           if (response.toLowerCase().includes('yield') || 
               response.toLowerCase().includes('apy') || 
               response.toLowerCase().includes('earning')) {
-            response += `\n\n**Your Attestify Vault:**\n• Current Balance: ${vaultBalance} cUSD\n• APY: ${currentAPY}%\n• Strategy: ${currentStrategy}\n• Total Earnings: ${earnings} cUSD`;
+            response += `\n\n**Your SeedVault:**\n• Current Balance: ${vaultBalance} cUSD\n• APY: ${currentAPY}%\n• Strategy: ${currentStrategy}\n• Total Earnings: ${earnings} cUSD`;
           }
           
           // Add sources if available
@@ -248,11 +248,11 @@ export default function AIChat({
       }
       
       // Fallback for DeFi questions
-      return `🤖 I can help explain DeFi concepts! Here's what I know about your question:\n\n**DeFi Basics:**\n• DeFi = Decentralized Finance\n• Uses smart contracts instead of banks\n• You control your own funds\n• Earn yield through protocols like Aave\n\n**Your Attestify Experience:**\n• You're already using DeFi! 🎉\n• Your cUSD earns yield through Mock Aave\n• Current APY: ${currentAPY}%\n• Strategy: ${currentStrategy}\n\n**Want to learn more?** Ask me about:\n• Yield farming\n• Liquidity pools\n• Smart contracts\n• Risk management\n\nWhat specific DeFi topic interests you? 🚀`;
+      return `🤖 I can help explain DeFi concepts! Here's what I know about your question:\n\n**DeFi Basics:**\n• DeFi = Decentralized Finance\n• Uses smart contracts instead of banks\n• You control your own funds\n• Earn yield through protocols like Aave\n\n**Your SeedVault Experience:**\n• You're already using DeFi! 🎉\n• Your cUSD earns yield through Mock Aave\n• Current APY: ${currentAPY}%\n• Strategy: ${currentStrategy}\n\n**Want to learn more?** Ask me about:\n• Yield farming\n• Liquidity pools\n• Smart contracts\n• Risk management\n\nWhat specific DeFi topic interests you? 🚀`;
     }
     // Default fallback
     else {
-      return `🤖 I'm your Attestify AI assistant! I can help you with:\n\n**Vault Management:**\n• Check your balance and earnings\n• Deposit or withdraw funds\n• Analyze your performance\n• Assess risks\n\n**Financial Advice:**\n• Strategy recommendations\n• Yield optimization tips\n• DeFi education\n\n**Quick Actions:**\n• Click the buttons below for instant help\n• Ask me anything about your vault!\n\nWhat would you like to know? 🚀`;
+      return `🤖 I'm your SeedVault AI assistant! I can help you with:\n\n**Vault Management:**\n• Check your balance and earnings\n• Deposit or withdraw funds\n• Analyze your performance\n• Assess risks\n\n**Financial Advice:**\n• Strategy recommendations\n• Yield optimization tips\n• DeFi education\n\n**Quick Actions:**\n• Click the buttons below for instant help\n• Ask me anything about your vault!\n\nWhat would you like to know? 🚀`;
     }
   };
 
