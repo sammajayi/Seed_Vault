@@ -3,7 +3,7 @@ import './globals.css';
 import { Providers } from './provider';
 
 export const metadata: Metadata = {
-  title: 'Attestify - Verified Savings on Celo',
+  title: 'SeedVault - Verified Savings on Celo',
   description: 'AI-powered investment vault with privacy-preserving identity verification. Built on Celo.',
   keywords: ['Celo', 'DeFi', 'Self Protocol', 'Savings', 'Aave Market'],
 };
