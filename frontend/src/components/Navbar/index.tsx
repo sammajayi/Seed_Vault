@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Menu, X } from 'lucide-react';
+import { Sprout, Menu, X } from 'lucide-react';
 import ConnectWalletButton from '@/components/ConnectWalletButton';
 import Link from 'next/link';
 
@@ -49,7 +49,7 @@ export default function Navbar() {
                 transition={{ duration: 0.6 }}
                 className="h-10 w-10 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center shadow-lg"
               >
-                <Shield className="h-6 w-6 text-white" />
+                <Sprout className="h-6 w-6 text-white" />
               </motion.div>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -57,7 +57,7 @@ export default function Navbar() {
                 transition={{ delay: 0.2 }}
                 className="text-xl font-bold text-gray-900"
               >
-                Attestify
+                SeedVault
               </motion.span>
             </Link>
           </motion.div>
