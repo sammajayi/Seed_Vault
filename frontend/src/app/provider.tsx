@@ -61,7 +61,7 @@ createAppKit({
     analytics: true, // Optional - defaults to your Cloud configuration
   },
   themeMode: 'light',
-  themeVariables: {
+  themeVariables: ({
     '--w3m-accent': '#B8B4B0', /* primary Warm Gray */
     '--w3m-primary': '#B8B4B0',
     '--w3m-secondary': '#F1EDE8',
@@ -69,7 +69,7 @@ createAppKit({
     '--w3m-foreground': '#0E0E0E',
     '--w3m-border-color': '#E6E3E0',
     '--w3m-border-radius-master': '12px',
-  },
+  } as unknown as Record<string, string>),
 });
 
 export function Providers({ children }: { children: React.ReactNode }) {

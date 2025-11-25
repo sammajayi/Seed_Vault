@@ -1,6 +1,6 @@
 #  Seed Vault
 
-**Automated DeFi Yield Generation on Celo • AI-Powered Investment Platform**
+**Automated DeFi Yield Generation • AI-Powered Investment Platform**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-seed%20vault-blue?style=for-the-badge&logo=vercel)](https://seedvault.vercel.app/)
 [![Contract](https://img.shields.io/badge/Smart%20Contract-View%20on%20CeloScan-green?style=for-the-badge&logo=ethereum)](https://sepolia.celoscan.io/address/0x9c75cC4A2D319363158dA01d97d5EFec55CED742)
@@ -88,8 +88,8 @@ Check dashboard daily. Chat with AI for advice. Withdraw anytime—no fees, no l
 
 **🌐 [Try Seed Vault Now](https://seedvault.vercel.app/)**
 
-- **Testnet**: Fully functional on Celo Sepolia
-- **Real Funds**: Use testnet cUSD to experience the platform
+- **Testnet**: Fully functional on Testnet
+- **Real Funds**: Use testnet token to experience the platform
 - **AI Assistant**: Chat with the AI to learn about DeFi
 - **Mobile Ready**: Works perfectly on all devices
 
